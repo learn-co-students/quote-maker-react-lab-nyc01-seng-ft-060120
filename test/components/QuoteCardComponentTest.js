@@ -36,30 +36,30 @@ describe('QuoteCard Component', () => {
   }
 
 
-  it('renders quote content from props.quote', () => {
+  // it('renders quote content from props.quote', () => {
     
-    wrapper = mount(<QuoteCard quote={quoteOne} />)
-    expect(wrapper.html()).to.include('test quote')
+  //   wrapper = mount(<QuoteCard quote={quoteOne} />)
+  //   expect(wrapper.html()).to.include('test quote')
 
-    wrapperTwo = mount(<QuoteCard quote={quoteTwo} />)
-    expect(wrapperTwo.html()).to.include('testing this quote')
-  });
+  //   wrapperTwo = mount(<QuoteCard quote={quoteTwo} />)
+  //   expect(wrapperTwo.html()).to.include('testing this quote')
+  // });
 
-  it('renders quote author from props.quote', () => {
+  // it('renders quote author from props.quote', () => {
     
-    wrapper = mount(<QuoteCard quote={quoteOne} />)
-    expect(wrapper.html()).to.include('test author')
+  //   wrapper = mount(<QuoteCard quote={quoteOne} />)
+  //   expect(wrapper.html()).to.include('test author')
 
-    wrapperTwo = mount(<QuoteCard quote={quoteTwo} />)
-    expect(wrapperTwo.html()).to.include('authoring this test')
-  });
+  //   wrapperTwo = mount(<QuoteCard quote={quoteTwo} />)
+  //   expect(wrapperTwo.html()).to.include('authoring this test')
+  // });
 
-  it('renders quote votes from props.quote', () => {
+  // it('renders quote votes from props.quote', () => {
     
-    wrapper = mount(<QuoteCard quote={quoteOne} />)
-    expect(wrapper.html()).to.include('0')
+  //   wrapper = mount(<QuoteCard quote={quoteOne} />)
+  //   expect(wrapper.html()).to.include('0')
 
-    wrapperTwo = mount(<QuoteCard quote={quoteTwo} />)
-    expect(wrapperTwo.html()).to.include('10')
-  });
+  //   wrapperTwo = mount(<QuoteCard quote={quoteTwo} />)
+  //   expect(wrapperTwo.html()).to.include('10')
+  // });
 })
