@@ -16,8 +16,8 @@ export default (state = [], action) => {
 
       return [
         ...state.slice(0, index),
-        Object.assign({}, quote, { votes: quote.votes++ }), //
-        ...state.slice(index++) //
+        Object.assign({}, quote, { votes: quote.votes += 1 }),
+        ...state.slice(index + 1)
       ];
 
     case 'DOWNVOTE_QUOTE':
@@ -26,8 +26,8 @@ export default (state = [], action) => {
       if (quote.votes > 0) {
         return [
           ...state.slice(0, index),
-          Object.assign({}, quote, { votes: quote.votes-- }), //
-          ...state.slice(index++)//
+          Object.assign({}, quote, { votes: quote.votes -= 1 }),
+          ...state.slice(index + 1)
         ];
       }
       return state;
