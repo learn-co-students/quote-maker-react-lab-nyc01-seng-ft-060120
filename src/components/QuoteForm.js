@@ -7,6 +7,8 @@ class QuoteForm extends Component {
 
   state = {
     //set up a controlled form with internal state
+    content: '',
+    author: ''
   }
 
   handleOnChange = event => {
@@ -18,6 +20,10 @@ class QuoteForm extends Component {
     // Create quote object from state
     // Pass quote object to action creator
     // Update component state to return to default state
+    const { value, name } = event.target;
+    this.setState({
+      [name]: value
+    });
   }
 
   render() {
@@ -63,4 +69,4 @@ class QuoteForm extends Component {
 }
 
 //add arguments to connect as needed
-export default connect()(QuoteForm);
+export default connect(null, { addQuote })(QuoteForm);
